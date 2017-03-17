@@ -65,7 +65,7 @@ Button scan;
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in1 = new Intent(scan.this, cart.class);
+                Intent in1 = new Intent(scan.this, finalcart.class);
                 startActivity(in1);
             }
 
@@ -78,7 +78,7 @@ Button scan;
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i2 = new Intent(scan.this,cart.class);
+                Intent i2 = new Intent(scan.this,finalcart.class);
                 startActivity(i2);
             }
 

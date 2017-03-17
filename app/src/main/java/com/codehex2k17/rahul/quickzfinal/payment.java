@@ -63,7 +63,7 @@ public class payment extends Activity implements PaymentResultListener,View.OnCl
         }
     }
 
-    
+
     @SuppressWarnings("unused")
     @Override
     public void onPaymentError(int code, String response) {

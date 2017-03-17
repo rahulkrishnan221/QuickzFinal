@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codehex2k17.rahul.quickzfinal">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,7 +41,11 @@
 
         <activity android:name=".addcart" />
         <activity android:name=".cart" />
-        <activity android:name=".payment"></activity>
+        <activity android:name=".finalcart"></activity>
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_ILgsfZCZoFIKMb" />
+        <activity android:name=".payment" />
     </application>
 
 </manifest>

@@ -51,3 +51,6 @@ dependencies
         {
             compile('com.razorpay:checkout:1.2.1')
         }
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
