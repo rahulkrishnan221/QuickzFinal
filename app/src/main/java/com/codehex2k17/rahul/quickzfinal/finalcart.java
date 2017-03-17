@@ -21,6 +21,7 @@ public class finalcart extends AppCompatActivity implements View.OnClickListener
     private ListView listView;
     double p;
     String s;
+    String q;
     Button checkout;
     private ProgressDialog loading;
 
@@ -64,9 +65,10 @@ public class finalcart extends AppCompatActivity implements View.OnClickListener
         pj.parsejson();
         TextView textView= (TextView)findViewById(R.id.textView);
         p=pj.Finalprice3;
-        s=Double.toString(p);
+        q=Double.toString(p);
+        s="Total Amount:\t Rs." +q;
         textView.setText(s);
-        customlistview cl = new customlistview(this, parsejson.ids,parsejson.Names,parsejson.Finalprices);
+        customlistview cl = new customlistview(this, parsejson.ids, parsejson.getNames(),parsejson.Finalprices);
         listView.setAdapter(cl);
     }
 
@@ -87,7 +89,7 @@ public class finalcart extends AppCompatActivity implements View.OnClickListener
             @Override
             public void onClick(View v) {
                 Intent in2 = new Intent(finalcart.this,payment.class);
-                in2.putExtra("amount",s);
+                in2.putExtra("amount",q);
                 startActivity(in2);
             }
 

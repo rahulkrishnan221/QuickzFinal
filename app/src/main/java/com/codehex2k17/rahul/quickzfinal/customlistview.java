@@ -15,7 +15,10 @@ public class customlistview extends ArrayAdapter<String> {
     private String[] ids;
     private String[] Names;
     private String[] Prices;
+
     private Activity context;
+
+
 
     public customlistview(Activity context, String[] ids, String[] Names, String[] Prices) {
         super(context, R.layout.activity_cart, ids);
@@ -33,9 +36,12 @@ public class customlistview extends ArrayAdapter<String> {
         TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
         TextView textViewPrice = (TextView) listViewItem.findViewById(R.id.textViewPrice);
 
-        textViewId.setText(ids[position]);
-        textViewName.setText(Names[position]);
-        textViewPrice.setText(Prices[position]);
+
+            textViewId.setText(ids[position]);
+            textViewName.setText(Names[position]);
+            textViewPrice.setText(Prices[position]);
+
+
 
         return listViewItem;
     }

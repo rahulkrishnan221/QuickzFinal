@@ -5,20 +5,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.stream.IntStream;
-
 /**
  * Created by vidhant on 12/3/17.
  */
 
 public class parsejson {
     public static String[] ids;
-    public static String[] Names;
+    private static String[] Names;
     public static String[] Finalprices;
     public static String[] Finalprices1;
+
     public static double Finalprice3;
 
-    private JSONArray cart=null;
+    public static JSONArray cart=null;
     private String json;
     double price1;
     double price;
@@ -26,13 +25,22 @@ public class parsejson {
     public parsejson(String json){
         this.json=json;
     }
+
+    public static String[] getNames() {
+        return Names;
+    }
+
+    public static void setNames(String[] names) {
+        Names = names;
+    }
+
     protected void parsejson(){
         JSONObject jsonObject=null;
         try{
             jsonObject=new JSONObject(json);
             cart=jsonObject.getJSONArray(Config.JSON_ARRAYCART);
             ids= new String[cart.length()];
-            Names= new String[cart.length()];
+            setNames(new String[cart.length()]);
             Finalprices=new String[cart.length()];
             Finalprices1=new String[cart.length()];
             for (int j=0;j<cart.length();j++) {
@@ -48,7 +56,7 @@ public class parsejson {
             for (int i=0 ; i<cart.length() ; i++) {
                 JSONObject jo = cart.getJSONObject(i);
                 ids[i] = jo.getString(Config.KEY_ID);
-                Names[i] = jo.getString(Config.KEY_NAME2);
+                getNames()[i] = jo.getString(Config.KEY_NAME2);
                 Finalprices[i] = jo.getString(Config.KEY_PRICE2);
 
 

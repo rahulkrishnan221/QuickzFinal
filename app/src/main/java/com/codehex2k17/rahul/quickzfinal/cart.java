@@ -104,7 +104,7 @@ public class cart extends AppCompatActivity implements View.OnClickListener{
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        textViewResult.setText("Name:\t" + Name + "\nMRP:\tRs" + Price+ "\nFinal Price:\t" + Finalprice);
+        textViewResult.setText("Name:\t" + Name + "\nMRP:\tRs" + Price+ "\nDiscount:\t"+ discount + "%" + "\nFinal Price:\t" + Finalprice);
     }
 
 

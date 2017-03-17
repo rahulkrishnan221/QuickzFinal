@@ -44,9 +44,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@+id/list"
+        android:layout_below="@+id/textView"
 
-        android:layout_marginTop="180dp"
+
         >
 
 

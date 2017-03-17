@@ -47,8 +47,8 @@ public class payment extends Activity implements PaymentResultListener,View.OnCl
             options.put("amount",s2);
 
             JSONObject preFill = new JSONObject();
-            preFill.put("email", "Email");
-            preFill.put("contact", "Phone");
+            preFill.put("email", "");
+            preFill.put("contact", "");
 
             options.put("prefill", preFill);
 
