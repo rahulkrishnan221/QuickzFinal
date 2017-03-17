@@ -17,7 +17,6 @@ import com.github.paolorotolo.appintro.AppIntro;
 public class Intro extends AppIntro {
     private SessionManagement session;
 
-String s;
 
 
     @Override

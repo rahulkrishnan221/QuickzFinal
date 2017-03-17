@@ -20,6 +20,8 @@ Button scan;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan);
         scan = (Button) findViewById(R.id.scan);
+        buttonclick();
+        buttonclick1();
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
