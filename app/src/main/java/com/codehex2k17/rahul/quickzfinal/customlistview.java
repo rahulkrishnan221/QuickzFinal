@@ -15,9 +15,9 @@ public class customlistview extends ArrayAdapter<String> {
     private String[] ids;
     private String[] Names;
     private String[] Prices;
+    public static TextView textViewId;
 
     private Activity context;
-
 
 
     public customlistview(Activity context, String[] ids, String[] Names, String[] Prices) {
@@ -32,17 +32,21 @@ public class customlistview extends ArrayAdapter<String> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem = inflater.inflate(R.layout.listviewfile, null, true);
-        TextView textViewId = (TextView) listViewItem.findViewById(R.id.textViewId);
+        textViewId = (TextView) listViewItem.findViewById(R.id.textViewId);
         TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
         TextView textViewPrice = (TextView) listViewItem.findViewById(R.id.textViewPrice);
 
 
-            textViewId.setText(ids[position]);
-            textViewName.setText(Names[position]);
-            textViewPrice.setText(Prices[position]);
-
+        textViewId.setText(ids[position]);
+        textViewName.setText(Names[position]);
+        textViewPrice.setText(Prices[position]);
 
 
         return listViewItem;
     }
+
+
+
+
+
 }

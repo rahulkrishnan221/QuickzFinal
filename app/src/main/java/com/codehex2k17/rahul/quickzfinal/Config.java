@@ -18,5 +18,6 @@ public class Config {
         public static String KEY_PRICE2 = "Finalprice";
         public static final String JSON_ARRAYCART="result";
         public static final String KEY_RURL= "http://www.theminimalist.esy.es/getall.php";
+    public static final String DEL_URL="http://www.theminimalist.esy.es/delete.php?id=";
 
 }
