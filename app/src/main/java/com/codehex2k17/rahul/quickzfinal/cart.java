@@ -27,8 +27,12 @@ public class cart extends AppCompatActivity implements View.OnClickListener{
     private TextView textViewResult;
     public static String Name;
     public static String Discount;
-    public static String Price;
+    double price;
+    double discount;
+    double finalprice;
     public static String Finalprice;
+    public static String Price;
+
     public static String id;
 
     private ProgressDialog loading;
@@ -91,10 +95,16 @@ public class cart extends AppCompatActivity implements View.OnClickListener{
             Name = Data.getString(Config.KEY_NAME);
             Price = Data.getString(Config.KEY_PRICE);
             Discount=Data.getString(Config.KEY_DISCOUNT);
+            price=Double.parseDouble(Price);
+            discount=Double.parseDouble(Discount);
+            finalprice=price-(discount/100*price);
+            Finalprice=Double.toString(finalprice);
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        textViewResult.setText("Name:\t" + Name + "\nMRP:\tRs" + Price);
+        textViewResult.setText("Name:\t" + Name + "\nMRP:\tRs" + Price+ "\nFinal Price:\t" + Finalprice);
     }
 
 

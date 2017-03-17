@@ -49,7 +49,7 @@ Button scan;
             } else {
                 String scanvalue = result.getContents();
                 temp = scanvalue;
-                Intent i = new Intent(scan.this,addcart.class);
+                Intent i = new Intent(scan.this,cart.class);
                 i.putExtra("TextBox", temp.toString());
                 startActivity(i);
 
