@@ -30,7 +30,7 @@ public class Splash extends AppCompatActivity {
 
         if (session.introDone()) {
 
-            Intent go = new Intent(this,MainActivity.class);
+            Intent go = new Intent(this,login.class);
 
             finish();
 
