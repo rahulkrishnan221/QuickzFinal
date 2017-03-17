@@ -61,8 +61,8 @@ public class addcart extends AppCompatActivity implements View.OnClickListener {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put(Config.KEY_ID, cart.id);
-                params.put(Config.KEY_NAME, cart.Name);
-                params.put(Config.KEY_PRICE, cart.Finalprice);
+                params.put(Config.KEY_NAME2, cart.Name);
+                params.put(Config.KEY_PRICE2, cart.Finalprice);
                 return params;
             }
 
