@@ -1,7 +1,7 @@
 package com.codehex2k17.rahul.quickzfinal;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,12 +16,19 @@ import org.json.JSONObject;
 public class payment extends Activity implements PaymentResultListener,View.OnClickListener
 {
     private static final String TAG = payment.class.getSimpleName();
+    String s1="";
+    String s2="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
         Button button = (Button) findViewById(R.id.pay);
+        Intent i = getIntent();
+        s1 = i.getStringExtra("amount");
+        double d=Double.parseDouble(s1);
+        d=d*100;
+        s2=Double.toString(d);
         button.setOnClickListener(this);
         button.performClick();
     }
@@ -37,7 +44,7 @@ public class payment extends Activity implements PaymentResultListener,View.OnCl
             options.put("description", "Shopping Charges");
             options.put("image", "https://rzp-mobile.s3.amazonaws.com/images/rzp.png");
             options.put("currency", "INR");
-            options.put("amount","1000");
+            options.put("amount",s2);
 
             JSONObject preFill = new JSONObject();
             preFill.put("email", "Email");
