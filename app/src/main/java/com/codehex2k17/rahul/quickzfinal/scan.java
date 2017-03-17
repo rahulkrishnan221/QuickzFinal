@@ -18,7 +18,7 @@ Button scan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan);
+        setContentView(R.layout.dashboard);
         scan = (Button) findViewById(R.id.scan);
         buttonclick();
         buttonclick1();
