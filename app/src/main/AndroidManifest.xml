@@ -18,9 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
         <activity
             android:name=".Intro"
             android:screenOrientation="portrait"
@@ -34,9 +31,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".scan"
+            android:label="Scan" />
 
         <category android:name="android.intent.category.DEFAULT" />
 
+        <activity android:name=".addcart" />
+        <activity android:name=".cart"></activity>
     </application>
 
 </manifest>
