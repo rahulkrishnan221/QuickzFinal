@@ -26,8 +26,7 @@
         tools:text="cart"
         android:layout_above="@+id/scan"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="79dp"
-        android:onClick="buttonclick"/>
+        android:layout_marginBottom="79dp" />
 
     <Button
         android:id="@+id/payment"
@@ -37,7 +36,6 @@
         android:layout_alignLeft="@+id/cart"
         android:layout_alignStart="@+id/cart"
         android:layout_marginBottom="30dp"
-        android:text="payment"
-        android:onClick="buttonclick1"/>
+        android:text="payment"/>
 
 </RelativeLayout>
