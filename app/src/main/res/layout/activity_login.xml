@@ -96,16 +96,11 @@
             android:layout_centerHorizontal="true">
 
 
-            <Button
-                android:id="@+id/google"
+            <com.google.android.gms.common.SignInButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/buttoncolor"
-                android:text="Login"
-                android:elevation="5dp"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:onClick="checkLogin"/>
+                android:id="@+id/googlebtn"></com.google.android.gms.common.SignInButton>
+
 
 
 
