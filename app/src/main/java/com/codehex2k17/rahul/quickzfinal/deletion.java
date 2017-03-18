@@ -27,7 +27,9 @@ public class deletion extends AppCompatActivity implements View.OnClickListener 
         btn=(Button)findViewById(R.id.btn);
         btn2=(Button)findViewById(R.id.btn2);
         btn.setOnClickListener(this);
+        btn2.setOnClickListener(this);
         btn.performClick();
+
     }
     private void deldata(){
         loading=ProgressDialog.show(this,"Deleting","please wait...",false,false);
@@ -38,6 +40,7 @@ public class deletion extends AppCompatActivity implements View.OnClickListener 
         public void onResponse(String response) {
             loading.dismiss();
             Toast.makeText(deletion.this, response, Toast.LENGTH_SHORT).show();
+            btn2.performClick();
         }
     },
             new Response.ErrorListener() {

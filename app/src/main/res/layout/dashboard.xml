@@ -13,7 +13,6 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="120sp"
-
             android:layout_height="120sp"
             android:layout_marginTop="5dp"
             android:background="@drawable/daru" />
@@ -22,7 +21,7 @@
 
     <LinearLayout
         android:id="@+id/box2"
-        android:layout_width="match_parent"
+        android:layout_width="180sp"
         android:layout_height="200sp"
         android:layout_marginTop="12dp"
         android:layout_toRightOf="@id/box1"
@@ -41,6 +40,17 @@
             android:background="@drawable/freecharge" />
 
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_toRightOf="@id/box2"
+        android:orientation="vertical">
+        <ImageButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:background="@drawable/logout"
+            android:id="@+id/logout"/>
     </LinearLayout>
 
     <LinearLayout

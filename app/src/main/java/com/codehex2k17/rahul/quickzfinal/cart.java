@@ -77,6 +77,7 @@ public class cart extends AppCompatActivity implements View.OnClickListener{
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(cart.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(cart.this, "Not in the databases", Toast.LENGTH_SHORT).show();
                     }
                 });
 

@@ -9,7 +9,6 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/buttonpanel"
         android:layout_marginBottom="10sp"
 
         android:gravity="center_horizontal"
@@ -61,35 +60,62 @@
 
 
         </LinearLayout>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/buttonpanel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonmaterial"
-        android:layout_marginBottom="31dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">
-
-
-        <Button
-            android:id="@+id/signin"
+        <LinearLayout
+            android:id="@+id/buttonpanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/buttoncolor"
-            android:text="Login"
-            android:elevation="5dp"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:onClick="checkLogin"/>
+            android:background="@drawable/buttonmaterial"
+            android:layout_below="@+id/credentials"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
 
+
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/buttoncolor"
+                android:text="Login"
+                android:elevation="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:onClick="checkLogin"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/last"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonmaterial"
+            android:layout_below="@+id/buttonpanel"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+
+            <Button
+                android:id="@+id/google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/buttoncolor"
+                android:text="Login"
+                android:elevation="5dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:onClick="checkLogin"/>
+
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
+
+
+
 
 
 </RelativeLayout>

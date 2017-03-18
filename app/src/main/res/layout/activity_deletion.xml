@@ -7,6 +7,7 @@
     tools:context="com.codehex2k17.rahul.quickzfinal.deletion">
     <Button
         android:layout_width="50dp"
+        android:alpha="0"
         android:layout_height="50dp"
         android:id="@+id/btn"/>
     <LinearLayout
@@ -14,10 +15,11 @@
         android:layout_height="200dp"
         android:layout_marginTop="700dp">
         <Button
-            android:layout_width="200dp"
+            android:layout_width="100dp"
             android:id="@+id/btn2"
             android:layout_marginLeft="50dp"
-            android:layout_height="200dp" />
+            android:alpha="0"
+            android:layout_height="100dp" />
     </LinearLayout>
 
 

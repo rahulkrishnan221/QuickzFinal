@@ -53,7 +53,7 @@
         <TextView
             android:id="@+id/textviewresult"
             android:layout_width="fill_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="35dp"
             android:textStyle="bold"
             android:textColor="@color/grey"
             android:layout_marginLeft="10dp"
