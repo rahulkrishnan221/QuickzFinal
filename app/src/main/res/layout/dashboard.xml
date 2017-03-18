@@ -50,7 +50,7 @@
             android:layout_width="40sp"
             android:layout_height="40sp"
             android:background="@drawable/logout"
-            android:id="@+id/logout"/>
+            android:id="@+id/logout1"/>
     </LinearLayout>
 
     <LinearLayout
