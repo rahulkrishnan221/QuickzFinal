@@ -40,6 +40,7 @@ public class finalcart extends AppCompatActivity implements View.OnClickListener
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                Toast.makeText(finalcart.this, "Item selected", Toast.LENGTH_SHORT).show();
 
                 data = (String) arg0.getItemAtPosition(arg2);
 
