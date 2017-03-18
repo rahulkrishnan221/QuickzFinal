@@ -39,7 +39,7 @@ public class deletion extends AppCompatActivity implements View.OnClickListener 
         @Override
         public void onResponse(String response) {
             loading.dismiss();
-            Toast.makeText(deletion.this, response, Toast.LENGTH_SHORT).show();
+            Toast.makeText(deletion.this, "Data deleted successfully", Toast.LENGTH_SHORT).show();
             btn2.performClick();
         }
     },

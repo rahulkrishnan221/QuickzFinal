@@ -81,7 +81,7 @@ public class finalcart extends AppCompatActivity implements View.OnClickListener
         TextView textView = (TextView) findViewById(R.id.textView);
         p = pj.Finalprice3;
         q = Double.toString(p);
-        s = "Total Amount:\t Rs." + q;
+        s = q;
         textView.setText(s);
         customlistview cl = new customlistview(this, parsejson.ids, parsejson.getNames(), parsejson.Finalprices);
         listView.setAdapter(cl);
