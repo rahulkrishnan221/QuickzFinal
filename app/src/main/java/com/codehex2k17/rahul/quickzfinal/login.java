@@ -142,6 +142,7 @@ public class login extends AppCompatActivity {
     public void checkLogin(View arg0) {
 
 
+
         final String email = username.getText().toString();
         if (!isValidEmail(email)) {
             username.setError("Invalid Email");
