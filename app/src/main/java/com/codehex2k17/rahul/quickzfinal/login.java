@@ -1,6 +1,5 @@
 package com.codehex2k17.rahul.quickzfinal;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +34,6 @@ public class login extends AppCompatActivity {
     public static final int RC_SIGN_IN=1;
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
-    ProgressDialog loading=null;
     private static final String TAG="Main_Activity";
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -44,18 +42,13 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth=FirebaseAuth.getInstance();
-
-
         mAuthListener= new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
                 if (firebaseAuth.getCurrentUser() !=null)
                 {
-
-
                     startActivity(new Intent(login.this,scan.class));
-
                 }
 
             }
@@ -86,7 +79,6 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signIn();
-
             }
         });
         username = (EditText) findViewById(R.id.username);
@@ -97,14 +89,12 @@ public class login extends AppCompatActivity {
     {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
-
     }
 
 
     private void signIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
-
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -114,12 +104,9 @@ public class login extends AppCompatActivity {
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             if (result.isSuccess()) {
-
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = result.getSignInAccount();
-
                 firebaseAuthWithGoogle(account);
-                loading.show(login.this,"Logging in...","",false,false);
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...
@@ -135,8 +122,6 @@ public class login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithCredential:onComplete:" + task.isSuccessful());
-
-
 
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
@@ -158,7 +143,6 @@ public class login extends AppCompatActivity {
 
 
 
-
         final String email = username.getText().toString();
         if (!isValidEmail(email)) {
             username.setError("Invalid Email");
@@ -174,7 +158,6 @@ public class login extends AppCompatActivity {
             sign.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     Intent i = new Intent(login.this,scan.class);
                     startActivity(i);
                 }
