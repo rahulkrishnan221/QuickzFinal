@@ -1,5 +1,6 @@
 package com.codehex2k17.rahul.quickzfinal;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,7 @@ public class login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private static final String TAG="Main_Activity";
     private FirebaseAuth.AuthStateListener mAuthListener;
+    public ProgressDialog loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +109,7 @@ public class login extends AppCompatActivity {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
+                loading.show(login.this,"Logging in...","",false,false);
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...
