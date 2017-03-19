@@ -19,6 +19,7 @@
             android:layout_width="150sp"
             android:layout_height="150sp"
             android:layout_marginTop="10sp"
+            android:background="@drawable/iconred"
 
             android:contentDescription="Image"/>
 
@@ -75,7 +76,7 @@
                 android:id="@+id/signin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/buttoncolor"
+                android:background="@drawable/buttonmaterial"
                 android:text="Login"
                 android:elevation="5dp"
                 android:textSize="20sp"
